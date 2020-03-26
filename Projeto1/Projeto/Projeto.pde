@@ -2,8 +2,6 @@ int margin=10;
 int space_between=1;
 
 void setup(){
-    
-  //tamanho ecra
   size(1000,800);
   
   Table table = loadTable("MissingMigrants-Global-2019-12-31_correct.csv", "header");
