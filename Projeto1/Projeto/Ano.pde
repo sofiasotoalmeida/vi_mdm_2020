@@ -12,7 +12,7 @@ class Ano {
     for(int i = 0; i < dots.size(); i++){
       dots.get(i).draw();
     }
-    drawLine();
+    //drawLine();
   }
   
   void addRegisto(int index, String date, float value, float minVal, float maxVal){
@@ -20,7 +20,7 @@ class Ano {
 
       float x = margin + space_between * index;
 
-      float y = map(value, minVal, maxVal, height - 10, 10);
+      float y = map(value, minVal, maxVal, height - 300, 300);
 
       PVector location = new PVector(x, y);
 

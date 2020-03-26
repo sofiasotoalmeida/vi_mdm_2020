@@ -1,4 +1,4 @@
-int margin=10;
+int margin=100;
 int space_between=1;
 
 void setup(){
@@ -40,8 +40,8 @@ void setup(){
     String date = row.getString("Reported Date");
     String year = row.getString("Reported Year");
     float value = float(row.getString("Total Dead and Missing")); 
-    
-    ano.addRegisto(i, date, value, min, max);
+    if (year.equals("2019"))
+      ano.addRegisto(i, date, value, min, max);
     
   }
   anos.add(ano);

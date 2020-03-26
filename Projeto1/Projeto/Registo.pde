@@ -16,6 +16,7 @@ class Registo{
   void draw(){
     noStroke();
     fill(colour);
+    valor_total=map(valor_total, 1, 150, 1, 50);
     ellipse(loc.x, loc.y, valor_total, valor_total);
   }
 }

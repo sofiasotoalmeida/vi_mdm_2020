@@ -12,7 +12,7 @@ class Regiao {
     for(int i = 0; i < anos.size(); i++){
       anos.get(i).draw();
     }
-    drawLine();
+    //drawLine();
   }
   
   void addRegisto(int index, String sitio, float value, float minVal, float maxVal){
@@ -27,7 +27,7 @@ class Regiao {
       anos.add(new Ano(sitio, colour));
 
   }
-  
+  /*
   void drawLine(){
 
     noFill();
@@ -44,6 +44,6 @@ class Regiao {
   
     endShape();
   
-  }
+  }*/
 
 }
