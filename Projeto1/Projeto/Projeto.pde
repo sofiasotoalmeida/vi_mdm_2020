@@ -1,5 +1,5 @@
-int margin=50;
-float space_between=0.05;
+int margin=0;
+float space_between=0.2;
 
 void setup(){
   size(1200,800);
@@ -12,7 +12,7 @@ void setup(){
   ArrayList<Ano> anos = new ArrayList<Ano>();
   Ano ano = new Ano("2019", #FF0000);
   
-  float max = 150;
+  float max = 3723;
   float min = 1;
   
   /*for(int column = 1; column < table.getColumnCount(); column++) {

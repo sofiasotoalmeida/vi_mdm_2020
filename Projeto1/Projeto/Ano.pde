@@ -20,7 +20,7 @@ class Ano {
 
       float x = margin + space_between * index;
 
-      float y = map(value, minVal, maxVal, height-100, 100);
+      float y = map(value, minVal, maxVal, height-100, 0);
 
       PVector location = new PVector(x, y);
 
