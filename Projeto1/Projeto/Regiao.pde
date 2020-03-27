@@ -12,10 +12,12 @@ class Regiao {
     for(int i = 0; i < anos.size(); i++){
       anos.get(i).draw();
     }
+
     //drawLine();
+
   }
   
-  void addRegisto(int index, String sitio, float value, float minVal, float maxVal){
+  void addAno(int index, String sitio, float value, float minVal, float maxVal){
       //space_between = (width - margin * 2) / (dots.size() - 1);
 
       float x = margin + space_between * index;
@@ -27,23 +29,32 @@ class Regiao {
       anos.add(new Ano(sitio, colour));
 
   }
+//<<<<<<< Updated upstream
   /*
   void drawLine(){
+=======
+  
+  //void drawLine(){
+>>>>>>> Stashed changes
 
-    noFill();
+  //  noFill();
     
-    stroke(colour);
+  //  stroke(colour);
     
-    beginShape();
+  //  beginShape();
     
-    for(int i = 0; i < anos.size(); i++){
+  //  for(int i = 0; i < anos.size(); i++){
     
-      vertex(anos.get(i).loc.x, anos.get(i).loc.y);
+  //    vertex(anos.get(i).loc.x, anos.get(i).loc.y);
     
-    }
+  //  }
   
-    endShape();
+  //  endShape();
   
+<<<<<<< Updated upstream
   }*/
+//=======
+  //}
+//>>>>>>> Stashed changes
 
 }

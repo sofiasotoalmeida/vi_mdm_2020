@@ -1,6 +1,8 @@
 class Registo{
 
+  //para a elipse
   PVector loc;
+  //para o tamanho da bola
   float valor_total;
   String date;
   color colour;
@@ -16,7 +18,8 @@ class Registo{
   void draw(){
     noStroke();
     fill(colour);
-    valor_total=map(valor_total, 1, 150, 1, 50);
+    //o map ainda está manual 
+    valor_total=map(valor_total, 1, 3723, 1, 100);
     ellipse(loc.x, loc.y, valor_total, valor_total);
   }
 }

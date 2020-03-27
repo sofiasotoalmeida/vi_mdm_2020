@@ -1,17 +1,20 @@
-int margin=100;
-int space_between=1;
+int margin=50;
+float space_between=0.05;
 
 void setup(){
-  size(1000,800);
+  size(1200,800);
+  background(0);
+  //1200/15 = 80 alt   800/6= 133 larg
   
   Table table = loadTable("MissingMigrants-Global-2019-12-31_correct.csv", "header");
 
-  int[] colors = new int[]{color(238, 128, 128), color(0, 193, 193)};
+  int[] colors = new int[]{color(238, 128, 128), color(0, 193, 193), color(0, 193, 193)};
   ArrayList<Ano> anos = new ArrayList<Ano>();
   Ano ano = new Ano("2019", #FF0000);
   
   float max = 150;
   float min = 1;
+  
   /*for(int column = 1; column < table.getColumnCount(); column++) {
     
     String name = table.getColumnTitle(column);
@@ -40,8 +43,10 @@ void setup(){
     String date = row.getString("Reported Date");
     String year = row.getString("Reported Year");
     float value = float(row.getString("Total Dead and Missing")); 
-    if (year.equals("2019"))
+    
+    //if (year.equals("2019"))
       ano.addRegisto(i, date, value, min, max);
+      
     
   }
   anos.add(ano);
