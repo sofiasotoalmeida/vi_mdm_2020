@@ -19,7 +19,7 @@ class Registo{
     noStroke();
     fill(colour);
     //o map ainda está manual 
-    valor_total=map(valor_total, 1, 3723, 1, 100);
+    valor_total=map(valor_total, 1, 1023, 1, 100);
     ellipse(loc.x, loc.y, valor_total, valor_total);
   }
 }
