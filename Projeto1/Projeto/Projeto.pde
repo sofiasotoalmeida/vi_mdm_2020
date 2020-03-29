@@ -29,9 +29,9 @@ void setup() {
 
   Table table = loadTable("MissingMigrants-Global-2019-12-31_correct.csv", "header");
 
-  //int[] colors = new int[]{color(8, 228, 255), color(8, 228, 255), color(0, 193, 193), color(0, 255, 193), color(255, 255, 193)};
   ArrayList<Ano> anos = new ArrayList<Ano>();
-  Ano ano = new Ano(nome_ano, cor);
+  //Ano ano = new Ano(nome_ano, cor);
+  Ano ano = new Ano("2019", cores[0]);
 
   float max = 1023;
   float min = 1;
@@ -63,28 +63,129 @@ void setup() {
 
     String date = row.getString("Reported Date");
     String year = row.getString("Reported Year");
+    String region = row.getString("Region of Incident");
     float value = float(row.getString("Total Dead and Missing")); 
-    
+ 
+ 
+ 
+  /*
+ if(region=="2019"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[0];
+   anos.add(ano);
 
-    
+ }
+ 
+  if(region=="2018"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[1];
+   anos.add(ano);
+ }
+ 
+   if(year=="2017"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[2];
+   anos.add(ano);
+ }
+ 
+    if(year=="2016"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[3];
+   anos.add(ano);
+ }
+ 
+ */
+ 
+ 
+ /*
+ if(region=="Mediterranean"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[0];
+   anos.add(ano);
 
-    if (!anos.contains(year)){
+ }
+ 
+  if(region=="East Asia"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[1];
+   anos.add(ano);
+ }
+ 
+   if(region=="Middle East"){
+   ano.addRegisto(i, date, value, min, max);
+   nome_ano = year;
+   cor = cores[2];
+   anos.add(ano);
+ }
+ 
+ */
+ 
+ //ETC
+ //OU ENTAO:
+ 
+  /*
+    if (!anos.contains(region)){
     ano.addRegisto(i, date, value, min, max);
+    
+    //nome_ano = year;
+    //cor = cores[anos.indexOf(ano)];
     anos.add(ano);
-    nome_ano = year;
-    cor = cores[anos.indexOf(ano)];
     }
     else{
       ano.addRegisto(i, date, value, min, max);
       nome_ano = year;
       cor = cores[anos.indexOf(ano)];
     }
-    
-    
-  
+    println(anos.size());
+ 
+ */
+ 
+ 
+  if(year=="2019"){
+   ano.addRegisto(i, date, value, min, max);
+   anos.add(ano);
+ }
+ 
   anos.add(ano);
   for (int j = 0; j < anos.size(); j++) {
     anos.get(i).draw();
+    
+    
   }
   }
+}
+
+void mousePressed(){
+  
+  //para grelha
+  rotate(PI/2);
+  fill(255);
+  textSize(10);
+  text("Mediterranean", 10,70);
+  text("East Asia", 10,150);
+  text("Middle East", 10,230);
+  text("Europe", 10,310);
+  text("US-Mexico Border", 10,390);
+  text("Central America", 10,550);
+  text("Sub-Saharan Africa", 10,630);
+  text("Caribbean", 10,710);
+  text("North Africa", 10,790);
+  text("South Asia", 10,870);
+  text("Horn of Africa", 10,950);
+ //outros q n encontro
+ 
+  text("2019", 750,70);
+  text("2018", 750,200);
+  text("2017", 750,340);
+  text("2016", 750,500);
+ 
+ 
+ 
+
 }
